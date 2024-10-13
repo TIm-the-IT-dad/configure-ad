@@ -226,4 +226,44 @@ In dc-1 ADUC we went into the locked out users account and proceeded to unlock i
 <p>
 Successfully logged into user account after unlocking (Step-25)
 </p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/gu2pIEF.png"
+</p>
+<p>
+Using Event Viewer inside dc-1 we observed the security authentication logs for a user (bet.rut) (see what people are doing on the network)  (Step-26)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/UIn89Aq.png"
+</p>
+<p>
+Dove more into DNS and observed how the computer will search for domains and where it checks first (map domain name to ip address we want inside DNS server) (Step-27)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/F9ken0L.png"
+</p>
+<p>
+In dc-1 we added 3 folders (named them different lvls of access) to the C-drive to practice assigning permissions (Step-28)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/vHM9YbA.png"
+</p>
+<p>
+Added domain users to the read access only folder (repeated with other folders except with no access folder gave domain admins read-write access) (Step-29)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/z6V0myr.png"
+</p>
+<p>
+Using normal users account (bet.rut) in client-1 VM we observed the new folders we created and which ones the user had access to (can also do with groups) (Step-30)
+</p>
 
