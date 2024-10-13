@@ -114,3 +114,116 @@ Back in dc-1 we ran the same command and observed dc-1s DNS server is still the 
 <p>
 Within dc-1 using Server Manager we installed Active Directory Domain Services feature to our server (Step-11)
 </p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/5ao53OS.png"
+</p>
+<p>
+Promoted dc-1 to a Domain Controller by adding a new forest within Server Manager (mydomain) (Step-12)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/x2xQgPf.png"
+</p>
+<p>
+Logged back in to dc-1 using domain name and username (not signing in locally) (Step-13)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/6RAb0a5.png"
+</p>
+<p>
+Inside dc-1 Active Directory Users and Computers we added two new organizational Units (OU) (Step-14)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/tbAykVd.png"
+</p>
+<p>
+Created a new admin user and named it Jane Doe (Step-15)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/73334oo.png"
+</p>
+<p>
+Made Jane a member of the Domain Admins Security Group to officially make her an admin then logged back in as jane_admin (Step-16)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/b3hkeLt.png"
+</p>
+<p>
+Added client-1 to the domain server in system settings using jane_admins account we created (Step-17)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/AAdf4e8.png"
+</p>
+<p>
+Went back into dc-1 in AD users and computers to observe that client-1 now shows up in the Domain Controller (Step-18)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/v6GI91h.png"
+</p>
+<p>
+Back in dc-1 as jane admin we copied a script into powershell ISE to add 10000 users to our Active Directory (Step-19)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/zrh54Kg.png"
+</p>
+<p>
+Picked a random user the script created in ADUC and logged onto client-1 with that users name and set password (with mydomain.com as context) (Step-20)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/X2uDJHz.png"
+</p>
+<p>
+Using Group Policy Management we configured the account lockout settings for users (Step-21)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/21IBvIS.png"
+</p>
+<p>
+Used a command to force the grop policy update as jane admin in client-1 (Step-22)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/0NMwoCd.png"
+</p>
+<p>
+Using a fake user we created in ADUC we successfully locked out the account with too many failed logon attempts (Step-23)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/dbvIcp1.png"
+</p>
+<p>
+In dc-1 ADUC we went into the locked out users account and proceeded to unlock it as jane admin (Step-24)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/IbyRqId.png"
+</p>
+<p>
+Successfully logged into user account after unlocking (Step-25)
+</p>
+
